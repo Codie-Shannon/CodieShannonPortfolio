@@ -33,15 +33,6 @@ export const projects: Project[] = [
     limitation:"Active product development; public portfolio material should describe verified current capability, not future roadmap items."
   },
   {
-    slug:"family-archive", name:"Family Archive", eyebrow:"Flagship · Archive platform",
-    summary:"A private family-media preservation platform built around integrity, role-aware access, duplicate review, derivative browsing and controlled archive workflows.",
-    category:"Flagship", stack:["Laravel","PHP","Media","Integrity","Cloud"], github:"https://github.com/Codie-Shannon/FamilyArchive",
-    status:"Portfolio-ready", featured:true, visual:"archive",
-    role:"Archive architecture, preservation rules, access control, intake/review workflows and production validation.",
-    proof:["Original-preservation boundaries","Role-aware archive workflows","Large-scale family media handling"],
-    limitation:"Public proof must use synthetic or sanitized content; private family media never belongs in the public portfolio."
-  },
-  {
     slug:"operationsflow", name:"OperationsFlow", eyebrow:"Business System · Blazor",
     summary:"Operational records, corrective actions, documents, risk, training, reporting and data-quality workflows in one business-facing system.",
     category:"Business System", stack:[".NET","Blazor","Operations","Reporting"], github:"https://github.com/Codie-Shannon/OperationsFlow",

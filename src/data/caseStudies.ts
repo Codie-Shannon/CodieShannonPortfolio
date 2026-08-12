@@ -40,34 +40,6 @@ export const caseStudies: CaseStudy[] = [
     ]
   },
   {
-    slug: "family-archive",
-    projectSlug: "family-archive",
-    label: "02 / PRESERVATION PLATFORM",
-    title: "Family Archive",
-    problem: "A serious family archive has to preserve original media, source context and decisions over time while still making approved content easy to browse and contribute to.",
-    constraints: [
-      "Originals must never be silently overwritten or replaced.",
-      "Duplicate and restoration decisions require human review.",
-      "Private family information and original storage details cannot leak into public proof."
-    ],
-    approach: [
-      "Separate preservation facts from editable descriptive metadata.",
-      "Use immutable hashes, lineage and derivative records around accepted media.",
-      "Apply role-aware browsing, contribution, review and administration boundaries.",
-      "Use synthetic or sanitized public evidence while keeping the real archive private."
-    ],
-    proof: [
-      "Controlled intake and duplicate-review workflows.",
-      "Derivative-only archive browsing.",
-      "Role-aware access and metadata history.",
-      "Production-scale family media handling and validation."
-    ],
-    limitations: [
-      "Public portfolio material intentionally omits real private family data.",
-      "Public screenshots must remain synthetic, sanitized or otherwise explicitly safe."
-    ]
-  },
-  {
     slug: "operationsflow",
     projectSlug: "operationsflow",
     label: "03 / BUSINESS SYSTEM",
