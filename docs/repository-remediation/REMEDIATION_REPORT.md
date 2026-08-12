@@ -6,7 +6,7 @@ Scope: all 36 public repositories
 
 ## Outcome
 
-Every public repository received exactly one disposition: 29 `SHOWCASE`, 4 `REPAIR`, 2 `HIDE`, and 1 `ARCHIVE`. The machine-readable record is [`repository-audit.json`](repository-audit.json).
+Every public repository received exactly one disposition: 32 `SHOWCASE`, 1 `REPAIR`, 2 `HIDE`, and 1 `ARCHIVE`. The machine-readable record is [`repository-audit.json`](repository-audit.json).
 
 The ten known broken-evidence repositories were repaired, validated, committed, and pushed. The common defect was diagnosed first in SyncBridgeLab: the screenshot script launched the compiled ASP.NET application from its output directory, so the content root did not contain `wwwroot`. Edge then saved a valid image of an HTTP 404 page and returned exit code zero.
 
@@ -38,21 +38,22 @@ The portfolio now uses fresh validated evidence from those ten repositories. Sup
 - repositories already represented in Projects;
 - the profile and portfolio repositories;
 - FamilyArchive while it is under repair;
-- the three Unity tools whose build/test validation passed but whose visual proof failed the portfolio gate;
 - the weaker, redundant standalone Power BI dashboard;
 - student work, which belongs only in Student Archive.
 
 FamilyArchive was removed from active portfolio presentation. No changes were made inside that repository.
 
+MissionMarkerToolkit, TrafficSystemLite, and VehicleSetupWizard now appear in Support Projects using fresh Unity Editor, tool-window, and Game-view evidence captured from temporary Unity 2022.3 projects.
+
 ## Stop conditions and open repairs
 
 ### FamilyArchive
 
-Audit work stopped because the local checkout contains unrelated changes. Current remote `main` also has failing test and lint workflows. Reconcile the local work and restore CI before re-auditing and re-approving it for the portfolio.
+The local checkout remains untouched because it contains unrelated changes. Remote-only diagnosis found that the `tests` workflow does not reach the PHP test suite: every PHP matrix job stops at `composer audit` because `league/commonmark` is locked at 2.8.3 and has six advisories fixed in 2.9.0. Dependabot separately reports `nanoid < 3.3.17`. The lint workflow reports Pint issues in seven `tools/family_photo_*.php` scripts. After the unrelated work is reconciled, update the vulnerable locks, apply Pint to the seven reported scripts, and rerun CI before portfolio re-approval.
 
-### MissionMarkerToolkit, TrafficSystemLite, and VehicleSetupWizard
+### Unity visual-evidence remediation
 
-All three import cleanly in Unity 2022.3 and pass 16/16 EditMode tests. Their current evidence is diagram-like proof rather than the tools operating on meaningful Unity content. They remain public but are classified `REPAIR` and are omitted from the portfolio until representative editor and Game-view captures exist.
+MissionMarkerToolkit, TrafficSystemLite, and VehicleSetupWizard each received four deliberate Unity-native captures. The evidence shows meaningful demo scenes plus the actual marker/route custom inspectors or vehicle setup window. All three still import cleanly in Unity 2022.3, pass 16/16 EditMode tests, and pass their package and release verifiers. They are now `SHOWCASE` and explicitly listed in Support Projects.
 
 ### LifeOS local reproduction
 
@@ -68,4 +69,4 @@ The local machine has .NET SDK 9.0.316 and no Android workload, while LifeOS tar
 
 ## Acceptance status
 
-The inventory, exact dispositions, ten-repository repair, portfolio allow-list, refreshed portfolio evidence, validation results, and machine-readable audit are complete. Four repositories intentionally remain in `REPAIR`; their blockers are explicit above and no behavior-changing or destructive workaround was attempted.
+The inventory, exact dispositions, ten-repository repair, Unity visual-evidence remediation, portfolio allow-list, refreshed portfolio evidence, validation results, and machine-readable audit are complete. FamilyArchive is the only repository remaining in `REPAIR`; its local checkout was left untouched and its remote CI blockers are explicit above.

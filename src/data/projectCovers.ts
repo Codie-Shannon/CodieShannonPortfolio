@@ -168,10 +168,10 @@ export const projectCovers: Record<string, ProjectCover> = {
     "reason": "Selected from 4 evidence image(s); score 27; 1440x900"
   },
   "vehiclesetupwizard": {
-    "src": "/evidence/vehiclesetupwizard/02.png",
+    "src": "/evidence/vehiclesetupwizard/03.png",
     "alt": "vehiclesetupwizard curated project cover",
     "objectPosition": "center 28%",
-    "reason": "Selected from 4 evidence image(s); score 17; -setup, 1440x900"
+    "reason": "Selected from 4 Unity-native evidence images; configured vehicle Game view"
   },
   "workflowconnectorhub": {
     "src": "/evidence/workflowconnectorhub/03.png",

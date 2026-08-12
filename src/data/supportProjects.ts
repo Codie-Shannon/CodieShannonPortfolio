@@ -68,6 +68,14 @@ export const supportProjects: SupportProject[] = [
     updatedAt: "2026-08-11",
   },
   {
+    slug: "missionmarkertoolkit",
+    name: "MissionMarkerToolkit",
+    description: "Unity mission-marker package with distance/state evaluation, minimap adapter boundaries, and validation-aware editor tooling.",
+    github: "https://github.com/Codie-Shannon/MissionMarkerToolkit",
+    language: "C#",
+    updatedAt: "2026-08-12",
+  },
+  {
     slug: "onboardingflow-laravel-proof",
     name: "OnboardingFlow Laravel Proof",
     description: "Laravel onboarding workflow proof spanning invites, submission, document evidence, review, follow-up, reporting, and audit history.",
@@ -130,6 +138,22 @@ export const supportProjects: SupportProject[] = [
     github: "https://github.com/Codie-Shannon/SupportDeskSimulator",
     language: "HTML",
     updatedAt: "2026-08-11",
+  },
+  {
+    slug: "trafficsystemlite",
+    name: "TrafficSystemLite",
+    description: "Unity route, intersection, traffic-agent lifecycle, gizmo, and custom-inspector package with a public-safe demo scene.",
+    github: "https://github.com/Codie-Shannon/TrafficSystemLite",
+    language: "C#",
+    updatedAt: "2026-08-12",
+  },
+  {
+    slug: "vehiclesetupwizard",
+    name: "VehicleSetupWizard",
+    description: "Unity editor workflow for validated, preview-first, Undo-aware vehicle configuration behind an explicit controller adapter boundary.",
+    github: "https://github.com/Codie-Shannon/VehicleSetupWizard",
+    language: "C#",
+    updatedAt: "2026-08-12",
   },
   {
     slug: "workflowconnectorhub",
