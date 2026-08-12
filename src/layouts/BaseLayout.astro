@@ -1,0 +1,37 @@
+---
+import "../styles/global.css";
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+
+interface Props { title?: string; description?: string; }
+const { title = "Codie Shannon — Business Systems & Workflow Automation Contractor", description = "Software developer and contractor building practical .NET, automation, data, workflow and custom systems." } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en-NZ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="theme-color" content="#070b10" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+    <script is:inline>
+      (() => {
+        const saved = localStorage.getItem("theme");
+        const systemLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.dataset.theme = saved || (systemLight ? "light" : "dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <SiteHeader />
+    <main><slot /></main>
+    <SiteFooter />
+  </body>
+</html>

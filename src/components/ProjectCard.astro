@@ -1,0 +1,7 @@
+---
+import type { Project } from "../data/projects";
+interface Props { project: Project; large?: boolean; }
+const { project, large = false } = Astro.props;
+---
+<article class:list={["project-card","panel","tech-corners",{large}]}><div class="card-top"><span class="eyebrow">{project.eyebrow}</span><span class="status">{project.status}</span></div><h3>{project.name}</h3><p>{project.summary}</p><div class="tags">{project.stack.map((tag)=><span>{tag}</span>)}</div><div class="card-actions"><a href={project.github} target="_blank" rel="noreferrer">Repository ↗</a><a href={`/projects/${project.slug}`}>Details →</a></div></article>
+<style>.project-card{padding:22px;min-height:260px;display:flex;flex-direction:column}.project-card.large{min-height:330px}.card-top{display:flex;justify-content:space-between;gap:12px}.eyebrow{margin:0}.eyebrow::before{display:none}.status{color:var(--muted);font-size:.72rem;white-space:nowrap}h3{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.7rem);margin:28px 0 10px;letter-spacing:-.04em}p{color:var(--muted-strong);line-height:1.62;margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.tags span{border:1px solid var(--line);background:var(--accent-soft);color:var(--muted-strong);padding:6px 8px;border-radius:999px;font-size:.72rem;font-weight:700}.card-actions{display:flex;justify-content:space-between;gap:14px;margin-top:auto;padding-top:26px;color:var(--accent-strong);font-size:.82rem;font-weight:800}</style>
