@@ -1,0 +1,1052 @@
+[
+  {
+    "slug": "accessaudit",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -13,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "assettrack",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -13,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "clientportal",
+    "winner": "02.png",
+    "score": 74,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 74,
+        "reasons": [
+          "+project",
+          "+client",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 74,
+        "reasons": [
+          "+project",
+          "+client",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 74,
+        "reasons": [
+          "+project",
+          "+client",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 31,
+        "reasons": [
+          "+project",
+          "+client",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "clouddeploylab",
+    "winner": "04.png",
+    "score": 30,
+    "candidates": [
+      {
+        "file": "04.png",
+        "score": 30,
+        "reasons": [
+          "1918x922"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 29,
+        "reasons": [
+          "1918x1022"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1918x921"
+        ]
+      },
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1918x971"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "debugforgestudio",
+    "winner": "02.png",
+    "score": 17,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 17,
+        "reasons": [
+          "+studio",
+          "-debug",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 17,
+        "reasons": [
+          "+studio",
+          "-debug",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 17,
+        "reasons": [
+          "+studio",
+          "-debug",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -23,
+        "reasons": [
+          "+studio",
+          "-debug",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "desktopgateway",
+    "winner": "02.png",
+    "score": 42,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 42,
+        "reasons": [
+          "+gateway",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 42,
+        "reasons": [
+          "+gateway",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 42,
+        "reasons": [
+          "+gateway",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 2,
+        "reasons": [
+          "+gateway",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "documentintelligencelab",
+    "winner": "02.png",
+    "score": 52,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 52,
+        "reasons": [
+          "+document",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 52,
+        "reasons": [
+          "+document",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 52,
+        "reasons": [
+          "+document",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 9,
+        "reasons": [
+          "+document",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "dynamicsopsdemo",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "eventstreamlab",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "familyarchive",
+    "winner": "01.png",
+    "score": 32,
+    "candidates": [
+      {
+        "file": "01.png",
+        "score": 32,
+        "reasons": [
+          "1918x1020"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 26,
+        "reasons": [
+          "1250x704"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 26,
+        "reasons": [
+          "1250x704"
+        ]
+      },
+      {
+        "file": "02.png",
+        "score": -12,
+        "reasons": [
+          "375x811"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "integrationgatewaylab",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "kbforge",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "lifeos",
+    "winner": "01-command-centre.png",
+    "score": 73,
+    "candidates": [
+      {
+        "file": "01-command-centre.png",
+        "score": 73,
+        "reasons": [
+          "+command",
+          "+centre",
+          "1918x1028"
+        ]
+      },
+      {
+        "file": "02-agenda.png",
+        "score": 49,
+        "reasons": [
+          "+agenda",
+          "1918x1018"
+        ]
+      },
+      {
+        "file": "03-money-pressure.png",
+        "score": 27,
+        "reasons": [
+          "1918x1027"
+        ]
+      },
+      {
+        "file": "04-follow-ups.png",
+        "score": 27,
+        "reasons": [
+          "1918x1022"
+        ]
+      },
+      {
+        "file": "05-weekly-closeout.png",
+        "score": -1,
+        "reasons": [
+          "-closeout",
+          "1918x1021"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "missionmarkertoolkit",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "operationsflow-toolkit",
+    "winner": "01.png",
+    "score": 22,
+    "candidates": [
+      {
+        "file": "01.png",
+        "score": 22,
+        "reasons": [
+          "1071x639"
+        ]
+      },
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1071x639"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1072x637"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1072x637"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "opsdiagnosticslab",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "opspilotai",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "phoenixmodern",
+    "winner": "02.png",
+    "score": 30,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 30,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 30,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 30,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -13,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "power-bi-work-order-dashboard",
+    "winner": "01.png",
+    "score": 41,
+    "candidates": [
+      {
+        "file": "01.png",
+        "score": 41,
+        "reasons": [
+          "+dashboard",
+          "1162x653"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "qaforge",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "rulesenginelab",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "searchretrievallab",
+    "winner": "02.png",
+    "score": 20,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 20,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "securetenantlab",
+    "winner": "02.png",
+    "score": 42,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 42,
+        "reasons": [
+          "+tenant",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 42,
+        "reasons": [
+          "+tenant",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 42,
+        "reasons": [
+          "+tenant",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 2,
+        "reasons": [
+          "+tenant",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "supportdesksimulator",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "syncbridgelab",
+    "winner": "02.png",
+    "score": 42,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 42,
+        "reasons": [
+          "+sync",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 42,
+        "reasons": [
+          "+sync",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 42,
+        "reasons": [
+          "+sync",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 2,
+        "reasons": [
+          "+sync",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "tokyo-nights-racing",
+    "winner": "01.png",
+    "score": 60,
+    "candidates": [
+      {
+        "file": "01.png",
+        "score": 60,
+        "reasons": [
+          "+racing",
+          "1544x865"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 58,
+        "reasons": [
+          "+racing",
+          "1540x859"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 58,
+        "reasons": [
+          "+racing",
+          "1538x859"
+        ]
+      },
+      {
+        "file": "02.png",
+        "score": 48,
+        "reasons": [
+          "+racing",
+          "855x481"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "trafficsystemlite",
+    "winner": "02.png",
+    "score": 27,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 27,
+        "reasons": [
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -20,
+        "reasons": [
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "vehiclesetupwizard",
+    "winner": "02.png",
+    "score": 17,
+    "candidates": [
+      {
+        "file": "02.png",
+        "score": 17,
+        "reasons": [
+          "-setup",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "03.png",
+        "score": 17,
+        "reasons": [
+          "-setup",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 17,
+        "reasons": [
+          "-setup",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": -30,
+        "reasons": [
+          "-setup",
+          "390x844"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "workflowconnectorhub",
+    "winner": "03.png",
+    "score": 37,
+    "candidates": [
+      {
+        "file": "03.png",
+        "score": 37,
+        "reasons": [
+          "+workflow",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "04.png",
+        "score": 37,
+        "reasons": [
+          "+workflow",
+          "1440x900"
+        ]
+      },
+      {
+        "file": "01.png",
+        "score": 7,
+        "reasons": [
+          "+workflow",
+          "960x1270"
+        ]
+      },
+      {
+        "file": "02.png",
+        "score": -8,
+        "reasons": [
+          "+workflow",
+          "390x844"
+        ]
+      }
+    ]
+  }
+]
