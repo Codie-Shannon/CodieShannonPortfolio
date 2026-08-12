@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import ProofWall from "../components/ProofWall.astro";
 import { featuredProjects } from "../data/projects";
 ---
 <BaseLayout>
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="hero-index"><span>PORTFOLIO / 2026</span><i></i><span>WHK · NZ</span></div>
-        <p class="eyebrow">Software · systems · controlled operation</p>
+        <div class="hero-index"><span>PORTFOLIO / 2026</span><i></i><span>WHK Â· NZ</span></div>
+        <p class="eyebrow">Software Â· systems Â· controlled operation</p>
         <h1 class="display">I build practical<br/><span>systems that solve</span><br/>real problems.</h1>
         <p class="lead">Software developer and systems contractor building operational tools, workflow automation, integrations and product-grade proof across .NET, web, data and hardware-facing work.</p>
         <div class="hero-actions">
-          <a class="button primary" href="/projects">View projects <span>→</span></a>
+          <a class="button primary" href="/projects">View projects <span>â†’</span></a>
           <a class="button ghost" href="/case-studies">Inspect case studies</a>
         </div>
         <div class="capability-strip">
@@ -41,10 +42,12 @@ import { featuredProjects } from "../data/projects";
     <div class="container lower-signal"><span>SCROLL / INSPECT</span><i></i><span>PUBLIC-SAFE EVIDENCE</span></div>
   </section>
 
+  <div class="container"><ProofWall/></div>
+
   <section class="featured container">
     <div class="section-head">
       <div><p class="eyebrow">Selected systems</p><h2 class="section-title">Built to be<br/>inspected.</h2></div>
-      <div class="section-copy"><p>Flagship products, business systems, restored desktop work and technical breadth — weighted by proof, not presented as a flat repository dump.</p><a href="/projects">Explore all public projects →</a></div>
+      <div class="section-copy"><p>Flagship products, business systems, restored desktop work and technical breadth â€” weighted by proof, not presented as a flat repository dump.</p><a href="/projects">Explore all public projects â†’</a></div>
     </div>
     <div class="project-grid">
       {featuredProjects.map((project,index) => <ProjectCard project={project} index={index} large={index<2}/>)}
@@ -53,7 +56,7 @@ import { featuredProjects } from "../data/projects";
 
   <section class="proof-band section-rule">
     <div class="container proof-grid">
-      <div class="proof-heading"><p class="eyebrow">How the work reads</p><h2 class="section-title">Problem → system → proof.</h2></div>
+      <div class="proof-heading"><p class="eyebrow">How the work reads</p><h2 class="section-title">Problem â†’ system â†’ proof.</h2></div>
       <div class="proof-steps">
         <article><span>01</span><h3>Operational problem</h3><p>Start from real constraints, not a showcase feature list.</p></article>
         <article><span>02</span><h3>Controlled implementation</h3><p>Clear boundaries, explicit state and human review where it matters.</p></article>
@@ -69,15 +72,15 @@ import { featuredProjects } from "../data/projects";
       <p class="lead">The strongest work is explained through constraints, implementation decisions, evidence and honest boundaries.</p>
     </div>
     <div class="case-grid">
-      <a class="case-card panel tech-corners" href="/projects/lifeos"><span class="number">01 / FLAGSHIP</span><h3>LifeOS</h3><p>One platform for visible operational state across work, money, projects, follow-ups and evidence.</p><b>Inspect system →</b></a>
-      <a class="case-card panel tech-corners" href="/projects/family-archive"><span class="number">02 / ARCHIVE</span><h3>Family Archive</h3><p>Preservation-first media architecture with role boundaries, integrity and controlled public proof.</p><b>Inspect system →</b></a>
-      <a class="case-card panel tech-corners" href="/projects/operationsflow"><span class="number">03 / BUSINESS</span><h3>OperationsFlow</h3><p>Business operations modeled as connected records, actions, risk, training and reporting.</p><b>Inspect system →</b></a>
+      <a class="case-card panel tech-corners" href="/projects/lifeos"><span class="number">01 / FLAGSHIP</span><h3>LifeOS</h3><p>One platform for visible operational state across work, money, projects, follow-ups and evidence.</p><b>Inspect system â†’</b></a>
+      <a class="case-card panel tech-corners" href="/projects/family-archive"><span class="number">02 / ARCHIVE</span><h3>Family Archive</h3><p>Preservation-first media architecture with role boundaries, integrity and controlled public proof.</p><b>Inspect system â†’</b></a>
+      <a class="case-card panel tech-corners" href="/projects/operationsflow"><span class="number">03 / BUSINESS</span><h3>OperationsFlow</h3><p>Business operations modeled as connected records, actions, risk, training and reporting.</p><b>Inspect system â†’</b></a>
     </div>
   </section>
 
   <section class="container contact-cta panel tech-corners">
-    <div><p class="eyebrow">Available for work</p><h2>Need a useful system built — not another dashboard nobody trusts?</h2></div>
-    <a class="button primary" href="/contact">Start a conversation →</a>
+    <div><p class="eyebrow">Available for work</p><h2>Need a useful system built â€” not another dashboard nobody trusts?</h2></div>
+    <a class="button primary" href="/contact">Start a conversation â†’</a>
   </section>
 </BaseLayout>
 
