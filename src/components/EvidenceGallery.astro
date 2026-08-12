@@ -1,0 +1,41 @@
+---
+import { evidenceImages } from "../data/evidence";
+interface Props { slug: string; limit?: number; }
+const { slug, limit = 6 } = Astro.props;
+const images = (evidenceImages[slug] ?? []).slice(0, limit);
+---
+{images.length > 0 && (
+  <section class="evidence-gallery">
+    <div class="gallery-head">
+      <div><p class="eyebrow">Real project evidence</p><h2>Selected screenshots</h2></div>
+      <span>{images.length.toString().padStart(2,"0")} / PUBLIC-SAFE</span>
+    </div>
+    <div class="gallery-grid">
+      {images.map((image,index) => (
+        <figure class:list={["panel","tech-corners",{wide:index===0}]}>
+          <a href={image.src} target="_blank" rel="noreferrer">
+            <img src={image.src} alt={image.alt} loading={index === 0 ? "eager" : "lazy"} decoding="async"/>
+          </a>
+          <figcaption><span>{String(index+1).padStart(2,"0")}</span><p>{image.caption}</p></figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+)}
+<style>
+.evidence-gallery{margin-top:18px;padding-top:50px;border-top:1px solid var(--line)}
+.gallery-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}
+.gallery-head h2{font-family:var(--font-display);font-size:clamp(2rem,5vw,3.7rem);letter-spacing:-.045em;margin:4px 0 0}
+.gallery-head>span{color:var(--muted);font:.62rem ui-monospace,SFMono-Regular,monospace;letter-spacing:.12em}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+figure{margin:0;overflow:hidden;background:var(--panel-strong)}
+figure.wide{grid-column:1/-1}
+figure a{display:block;background:#020407}
+figure img{width:100%;height:330px;object-fit:cover;object-position:center;transition:transform .22s ease,opacity .22s ease}
+figure.wide img{height:min(56vw,650px);object-fit:contain}
+figure:hover img{transform:scale(1.008);opacity:.96}
+figcaption{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:13px 15px;border-top:1px solid var(--line);align-items:start}
+figcaption span{color:var(--accent);font:.64rem ui-monospace,SFMono-Regular,monospace}
+figcaption p{margin:0;color:var(--muted-strong);font-size:.75rem;line-height:1.5}
+@media(max-width:760px){.gallery-grid{grid-template-columns:1fr}figure.wide{grid-column:auto}figure img,figure.wide img{height:auto;max-height:560px;object-fit:contain}.gallery-head{align-items:flex-start;flex-direction:column}}
+</style>

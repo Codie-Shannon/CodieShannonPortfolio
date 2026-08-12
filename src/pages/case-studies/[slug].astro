@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceGallery from "../../components/EvidenceGallery.astro";
+import { caseStudies } from "../../data/caseStudies";
+import { projects } from "../../data/projects";
+import type { CaseStudy } from "../../data/caseStudies";
+
+export function getStaticPaths() {
+  return caseStudies.map(caseStudy => ({params:{slug:caseStudy.slug},props:{caseStudy}}));
+}
+const { caseStudy } = Astro.props as { caseStudy: CaseStudy };
+const project = projects.find(item => item.slug === caseStudy.projectSlug);
+if (!project) throw new Error(`Missing project for case study ${caseStudy.slug}`);
+---
+<BaseLayout title={`${caseStudy.title} Case Study — Codie Shannon`} description={caseStudy.problem}>
+  <section class="container case-hero">
+    <a class="back" href="/case-studies">← Case studies</a>
+    <p class="eyebrow">{caseStudy.label}</p>
+    <h1 class="section-title">{caseStudy.title}</h1>
+    <p class="lead">{caseStudy.problem}</p>
+    <div class="hero-actions"><a class="button primary" href={`/projects/${project.slug}`}>Project overview →</a><a class="button ghost" href={project.github} target="_blank" rel="noreferrer">Repository ↗</a></div>
+  </section>
+
+  <section class="container narrative">
+    <article class="panel tech-corners"><span>01</span><div><p class="kicker">Constraints</p><h2>What the system had to respect.</h2><ul>{caseStudy.constraints.map(item=><li>{item}</li>)}</ul></div></article>
+    <article class="panel tech-corners"><span>02</span><div><p class="kicker">Approach</p><h2>How the problem was shaped into software.</h2><ul>{caseStudy.approach.map(item=><li>{item}</li>)}</ul></div></article>
+    <article class="panel tech-corners"><span>03</span><div><p class="kicker">Proof</p><h2>What can actually be inspected.</h2><ul>{caseStudy.proof.map(item=><li>{item}</li>)}</ul></div></article>
+    <article class="panel tech-corners boundary"><span>04</span><div><p class="kicker">Limitations / boundaries</p><h2>What is deliberately not overstated.</h2><ul>{caseStudy.limitations.map(item=><li>{item}</li>)}</ul></div></article>
+  </section>
+
+  <div class="container"><EvidenceGallery slug={project.slug} limit={8}/></div>
+</BaseLayout>
+<style>
+.case-hero{padding:90px 0 54px;max-width:1100px}.back{display:inline-block;margin-bottom:44px;color:var(--muted);font-size:.76rem;font-weight:800}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.narrative{display:grid;gap:14px}.narrative article{display:grid;grid-template-columns:90px 1fr;gap:24px;padding:30px}.narrative article>span{color:var(--accent);font:700 1.15rem var(--font-display)}.narrative h2{font-family:var(--font-display);font-size:clamp(1.65rem,4vw,2.8rem);letter-spacing:-.04em;margin:8px 0 18px}.narrative ul{list-style:none;padding:0;margin:0}.narrative li{padding:12px 0;border-top:1px solid var(--line);color:var(--muted-strong);line-height:1.65}.narrative li::before{content:"→";color:var(--accent);margin-right:12px}.boundary{border-color:color-mix(in srgb,var(--warning) 35%,var(--line))}
+@media(max-width:700px){.narrative article{grid-template-columns:1fr}.narrative article>span{font-size:.75rem}}
+</style>
