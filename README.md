@@ -1,41 +1,41 @@
 # Codie Shannon Portfolio
 
-Astro/TypeScript portfolio foundation for **www.codieshannon.dev**.
+Astro/TypeScript portfolio for **www.codieshannon.dev**.
 
-## Design direction
+## Visual direction
 
-The approved black business-card identity expanded into a full web system:
+The site extends the approved black business-card identity into a recruiter/client-facing system:
 
 - near-black / charcoal primary canvas;
 - white typography;
 - muted steel-blue accents;
-- thin technical dividers and geometric detail;
-- subtle dotted/grid texture;
-- deliberate light theme rather than a colour inversion;
+- technical dividers, grids and linework;
+- deliberate light theme rather than a simple inversion;
 - restrained motion;
-- professional first, distinctive second.
+- professional first, distinctive second;
+- flagship projects visually weighted above support work.
 
-## Foundation scope
+## Current portfolio pass
 
-- Astro 7 + TypeScript;
-- dark/light theme with system preference and persisted override;
-- Home, Projects, Case Studies, About, Contact and 404 pages;
-- initial project content model and featured hierarchy;
-- canonical/description/Open Graph SEO foundation;
-- sitemap + robots;
-- GitHub Pages workflow;
-- `www.codieshannon.dev` CNAME;
-- responsive design tokens and reusable project cards.
+Visual Overhaul v2 adds:
 
-## Still to wire
+- dramatic asymmetric homepage composition;
+- stronger flagship hierarchy;
+- technical project-preview surfaces;
+- project detail routes for every listed project;
+- improved Projects, Case Studies, About and Contact pages;
+- responsive/mobile refinements;
+- accessibility-aware reduced-motion behavior;
+- truthful public-boundary wording for flagship work.
+
+## Still intentionally pending
 
 - final professional profile photo;
 - final CV PDF at `public/cv.pdf`;
 - final email and LinkedIn details;
-- real project screenshots;
-- strongest CaseStudyLibrary content;
-- full 34-project content pass;
-- Cloudflare DNS and GitHub Pages custom-domain activation.
+- real project screenshots / galleries;
+- deeper case-study copy imported from verified project evidence;
+- full public-project inventory expansion.
 
 ## Development
 
@@ -44,8 +44,9 @@ npm install
 npm run dev
 ```
 
-## Production validation
+## Validation
 
 ```powershell
+npm run check
 npm run build
 ```

@@ -1,5 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
-<BaseLayout title="Case Studies — Codie Shannon"><section class="container page-head"><p class="eyebrow">Evidence in context</p><h1 class="section-title">Case Studies</h1><p class="lead">Selected work presented around the problem, constraints, implementation decisions and evidence — not just screenshots.</p><div class="cases"><article class="panel"><span>01</span><h2>Workflow automation</h2><p>Structured operational workflows, review boundaries and evidence-oriented delivery.</p></article><article class="panel"><span>02</span><h2>Document intelligence</h2><p>Document intake, classification, extraction, confidence and human approval.</p></article><article class="panel"><span>03</span><h2>Production-scale archive</h2><p>Integrity-first media handling and large-scale production validation.</p></article></div></section></BaseLayout>
-<style>.page-head{padding:100px 0 80px}.cases{display:grid;gap:14px;margin-top:42px}.cases article{padding:26px}.cases span{color:var(--accent);font-family:var(--font-display)}h2{font-family:var(--font-display);font-size:1.8rem;margin:12px 0 8px}article p{color:var(--muted-strong);line-height:1.6}</style>
+<BaseLayout title="Case Studies — Codie Shannon">
+  <section class="container page-head">
+    <div class="head-grid">
+      <div><p class="eyebrow">Evidence in context</p><h1 class="section-title">The work,<br/>explained.</h1></div>
+      <p class="lead">Case studies are structured around the problem, constraints, implementation decisions, verification and limitations — so the screenshots have context.</p>
+    </div>
+  </section>
+  <section class="container cases">
+    <a class="case panel tech-corners" href="/projects/lifeos"><span>01 / FLAGSHIP PLATFORM</span><div><h2>LifeOS</h2><p>Turning real-world chaos into visible operational state across work, money, projects, follow-ups and evidence.</p></div><b>Inspect case →</b></a>
+    <a class="case panel tech-corners" href="/projects/family-archive"><span>02 / PRESERVATION PLATFORM</span><div><h2>Family Archive</h2><p>Designing a private archive around preservation, role boundaries, human review and public-safe evidence.</p></div><b>Inspect case →</b></a>
+    <a class="case panel tech-corners" href="/projects/operationsflow"><span>03 / BUSINESS SYSTEM</span><div><h2>OperationsFlow</h2><p>Connecting operational records, actions, risk, training and reporting into a coherent workflow proof.</p></div><b>Inspect case →</b></a>
+    <a class="case panel tech-corners" href="/projects/media-manager"><span>04 / RESTORATION</span><div><h2>Media Manager</h2><p>Recovering an early desktop application, replacing brittle integrations and preserving the original engineering story.</p></div><b>Inspect case →</b></a>
+  </section>
+</BaseLayout>
+<style>
+.head-grid{display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:end}.cases{display:grid;gap:14px;padding-bottom:50px}.case{display:grid;grid-template-columns:190px 1fr auto;gap:34px;align-items:center;padding:28px;min-height:170px}.case>span{color:var(--accent);font:.66rem ui-monospace,SFMono-Regular,monospace;letter-spacing:.12em}.case h2{font-family:var(--font-display);font-size:2rem;letter-spacing:-.04em;margin:0}.case p{color:var(--muted-strong);line-height:1.6;margin:8px 0 0}.case b{color:var(--accent-strong);font-size:.78rem}.case:hover{border-color:var(--line-strong)}
+@media(max-width:850px){.head-grid,.case{grid-template-columns:1fr}.case{gap:16px}}
+</style>

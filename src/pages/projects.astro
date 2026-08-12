@@ -4,5 +4,33 @@ import ProjectCard from "../components/ProjectCard.astro";
 import { projects } from "../data/projects";
 const categories=[...new Set(projects.map(p=>p.category))];
 ---
-<BaseLayout title="Projects — Codie Shannon"><section class="page-head container"><p class="eyebrow">Portfolio</p><h1 class="section-title">Projects</h1><p class="lead">Flagship systems, business applications, engineering labs, developer tooling and Unity work — organized by purpose rather than presented as thirty-four equal-weight repositories.</p><div class="filters"><button class="active" data-filter="all">All</button>{categories.map(c=><button data-filter={c}>{c}</button>)}</div></section><section class="container project-grid">{projects.map(project=><div data-category={project.category}><ProjectCard project={project}/></div>)}</section><script>const buttons=document.querySelectorAll("[data-filter]");const items=document.querySelectorAll("[data-category]");buttons.forEach(button=>button.addEventListener("click",()=>{buttons.forEach(b=>b.classList.remove("active"));button.classList.add("active");const target=button.dataset.filter;items.forEach(item=>item.hidden=target!=="all"&&item.dataset.category!==target)}));</script></BaseLayout>
-<style>.page-head{padding:100px 0 42px}.filters{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}.filters button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:999px;padding:8px 12px;cursor:pointer;font-weight:700}.filters button.active{color:#071018;background:var(--accent);border-color:var(--accent)}.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-bottom:80px}@media(max-width:800px){.project-grid{grid-template-columns:1fr}}</style>
+<BaseLayout title="Projects — Codie Shannon">
+  <section class="page-head container">
+    <div class="head-grid">
+      <div><p class="eyebrow">Portfolio index</p><h1 class="section-title">Systems,<br/>not filler.</h1></div>
+      <div><p class="lead">Projects are organized by what they prove: flagship product thinking, business-system delivery, desktop engineering, technical labs and game-development breadth.</p><div class="index-rule"><span>FILTER / INSPECT / FOLLOW PROOF</span><i></i></div></div>
+    </div>
+    <div class="filters" role="group" aria-label="Project filters">
+      <button class="active" data-filter="all">All</button>{categories.map(c=><button data-filter={c}>{c}</button>)}
+    </div>
+  </section>
+  <section class="container project-grid">
+    {projects.map((project,index)=><div data-category={project.category}><ProjectCard project={project} index={index}/></div>)}
+  </section>
+  <script>
+    const buttons=document.querySelectorAll<HTMLButtonElement>("[data-filter]");
+    const items=document.querySelectorAll<HTMLElement>("[data-category]");
+    buttons.forEach(button=>button.addEventListener("click",()=>{
+      buttons.forEach(b=>b.classList.remove("active"));
+      button.classList.add("active");
+      const target=button.dataset.filter;
+      items.forEach(item=>item.hidden=target!=="all"&&item.dataset.category!==target)
+    }));
+  </script>
+</BaseLayout>
+<style>
+.page-head{padding-bottom:38px}.head-grid{display:grid;grid-template-columns:1fr .85fr;gap:70px;align-items:end}.index-rule{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;margin-top:28px;color:var(--muted);font-size:.62rem;letter-spacing:.14em}.index-rule i{height:1px;background:var(--line)}
+.filters{display:flex;flex-wrap:wrap;gap:7px;margin-top:48px;padding-top:18px;border-top:1px solid var(--line)}.filters button{border:1px solid var(--line);background:var(--panel);color:var(--muted);border-radius:7px;padding:8px 11px;cursor:pointer;font-size:.72rem;font-weight:800}.filters button:hover{border-color:var(--accent)}.filters button.active{color:#061018;background:var(--accent);border-color:var(--accent)}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;padding-bottom:40px}[hidden]{display:none!important}
+@media(max-width:900px){.head-grid,.project-grid{grid-template-columns:1fr}}
+</style>

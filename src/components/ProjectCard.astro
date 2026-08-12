@@ -1,7 +1,61 @@
 ---
 import type { Project } from "../data/projects";
-interface Props { project: Project; large?: boolean; }
-const { project, large = false } = Astro.props;
+interface Props { project: Project; large?: boolean; index?: number; }
+const { project, large = false, index = 0 } = Astro.props;
+const visual = project.visual ?? "lab";
 ---
-<article class:list={["project-card","panel","tech-corners",{large}]}><div class="card-top"><span class="eyebrow">{project.eyebrow}</span><span class="status">{project.status}</span></div><h3>{project.name}</h3><p>{project.summary}</p><div class="tags">{project.stack.map((tag)=><span>{tag}</span>)}</div><div class="card-actions"><a href={project.github} target="_blank" rel="noreferrer">Repository ↗</a><a href={`/projects/${project.slug}`}>Details →</a></div></article>
-<style>.project-card{padding:22px;min-height:260px;display:flex;flex-direction:column}.project-card.large{min-height:330px}.card-top{display:flex;justify-content:space-between;gap:12px}.eyebrow{margin:0}.eyebrow::before{display:none}.status{color:var(--muted);font-size:.72rem;white-space:nowrap}h3{font-family:var(--font-display);font-size:clamp(1.7rem,4vw,2.7rem);margin:28px 0 10px;letter-spacing:-.04em}p{color:var(--muted-strong);line-height:1.62;margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.tags span{border:1px solid var(--line);background:var(--accent-soft);color:var(--muted-strong);padding:6px 8px;border-radius:999px;font-size:.72rem;font-weight:700}.card-actions{display:flex;justify-content:space-between;gap:14px;margin-top:auto;padding-top:26px;color:var(--accent-strong);font-size:.82rem;font-weight:800}</style>
+<article class:list={["project-card","panel","tech-corners",{large}]} data-visual={visual}>
+  <div class="preview" aria-hidden="true">
+    <div class="preview-bar"><span>{String(index + 1).padStart(2,"0")} / SYSTEM PROOF</span><i></i></div>
+    <div class="preview-grid">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="preview-core">
+      <strong>{project.name}</strong>
+      <small>{project.category}</small>
+    </div>
+    <div class="signal s1"></div><div class="signal s2"></div><div class="signal s3"></div>
+  </div>
+
+  <div class="card-body">
+    <div class="card-top">
+      <span class="eyebrow">{project.eyebrow}</span>
+      <span class="status"><i class="status-dot"></i>{project.status}</span>
+    </div>
+    <h3>{project.name}</h3>
+    <p>{project.summary}</p>
+    <div class="tags">{project.stack.map(tag => <span>{tag}</span>)}</div>
+    <div class="card-actions">
+      <a href={`/projects/${project.slug}`}>Inspect project <span>→</span></a>
+      <a href={project.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</article>
+
+<style>
+.project-card{overflow:hidden;display:grid;grid-template-rows:auto 1fr;min-height:440px}
+.project-card.large{min-height:520px}
+.preview{height:190px;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:
+  linear-gradient(145deg,color-mix(in srgb,var(--panel-strong) 96%,transparent),color-mix(in srgb,var(--accent-soft) 55%,var(--panel-strong)))}
+.large .preview{height:240px}
+.preview::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,transparent 49.7%,color-mix(in srgb,var(--accent) 20%,transparent) 50%,transparent 50.3%),
+  linear-gradient(0deg,transparent 49.7%,color-mix(in srgb,var(--accent) 14%,transparent) 50%,transparent 50.3%);
+  background-size:52px 52px;opacity:.8}
+.preview::after{content:"";position:absolute;width:280px;height:280px;border:1px solid color-mix(in srgb,var(--accent) 26%,transparent);border-radius:50%;right:-100px;top:-110px;box-shadow:0 0 0 34px color-mix(in srgb,var(--accent) 4%,transparent),0 0 0 68px color-mix(in srgb,var(--accent) 3%,transparent)}
+.preview-bar{position:absolute;z-index:2;left:16px;right:16px;top:14px;display:flex;justify-content:space-between;color:var(--muted);font:.64rem ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.11em}
+.preview-bar i{width:7px;height:7px;border-radius:50%;background:var(--success);box-shadow:0 0 18px var(--success)}
+.preview-grid{position:absolute;left:18px;bottom:20px;display:grid;grid-template-columns:repeat(6,9px);gap:6px}
+.preview-grid span{width:9px;height:9px;border:1px solid color-mix(in srgb,var(--accent) 45%,var(--line));background:var(--accent-faint)}
+.preview-grid span:nth-child(3),.preview-grid span:nth-child(4){background:var(--accent)}
+.preview-core{position:absolute;right:18px;bottom:18px;text-align:right;z-index:2}.preview-core strong{display:block;font-family:var(--font-display);font-size:clamp(1.1rem,2.5vw,1.55rem);letter-spacing:-.03em}.preview-core small{color:var(--accent-strong);font-size:.68rem;text-transform:uppercase;letter-spacing:.13em}
+.signal{position:absolute;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:.5;transform:rotate(-28deg);transform-origin:right center}.s1{width:180px;right:28%;top:42%}.s2{width:120px;right:14%;top:62%}.s3{width:90px;right:42%;top:73%}
+[data-visual="archive"] .preview-grid span:nth-child(odd){background:color-mix(in srgb,var(--accent) 45%,transparent)}
+[data-visual="ops"] .preview::after{border-radius:0;transform:rotate(25deg)}
+[data-visual="unity"] .signal{transform:rotate(-8deg)}
+.card-body{padding:22px;display:flex;flex-direction:column}.card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}.eyebrow{margin:0}.eyebrow::before{display:none}.status{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.7rem;white-space:nowrap}.status-dot{width:6px;height:6px}
+h3{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.75rem);margin:24px 0 10px;letter-spacing:-.045em;line-height:.95}
+p{color:var(--muted-strong);line-height:1.64;margin:0}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:22px}.tags span{border:1px solid var(--line);background:var(--accent-faint);color:var(--muted-strong);padding:6px 8px;border-radius:999px;font-size:.69rem;font-weight:800}
+.card-actions{display:flex;justify-content:space-between;gap:14px;margin-top:auto;padding-top:28px;border-top:1px solid var(--line);margin-top:28px;color:var(--accent-strong);font-size:.8rem;font-weight:800}.card-actions a:hover{color:var(--text)}
+@media(max-width:620px){.preview{height:170px}.large .preview{height:190px}.card-actions{flex-direction:column}}
+</style>
