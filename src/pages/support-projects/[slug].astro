@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EvidenceGallery from "../../components/EvidenceGallery.astro";
+import ReadmePanel from "../../components/ReadmePanel.astro";
+import { supportProjects } from "../../data/supportProjects";
+import type { SupportProject } from "../../data/supportProjects";
+import { repoDetails } from "../../data/repoDetails";
+export function getStaticPaths(){return supportProjects.map(project=>({params:{slug:project.slug},props:{project}}));}
+const {project}=Astro.props as {project:SupportProject};
+const readme=repoDetails[project.slug];
+---
+<BaseLayout title={`${project.name} — Support Project — Codie Shannon`} description={project.description}>
+<section class="container project-hero"><a class="back" href="/support-projects">&lt;- Support projects</a><p class="eyebrow">Support Project · {project.language||"Repository"}</p><h1 class="section-title">{project.name}</h1><p class="lead">{project.description||"Focused supporting repository and technical proof."}</p><div class="actions"><a class="button primary" href={project.github} target="_blank" rel="noreferrer">Repository ^</a></div></section>
+<div class="container"><ReadmePanel detail={readme}/></div><div class="container"><EvidenceGallery slug={project.slug}/></div>
+</BaseLayout>
+<style>.project-hero{padding:90px 0 42px;max-width:1050px}.back{display:inline-block;margin-bottom:46px;color:var(--muted);font-size:.76rem;font-weight:800}.actions{margin-top:28px}</style>
