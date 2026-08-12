@@ -1,34 +1,65 @@
 ---
 import { evidenceImages } from "../data/evidence";
-const entries = [
+
+const requested = [
   ["lifeos","LifeOS","Flagship command centre"],
   ["family-archive","Family Archive","Preservation platform"],
-  ["tokyo-nights-racing","Tokyo Nights Racing","Unity systems proof"],
   ["operationsflow","OperationsFlow","Business operations"],
-  ["media-manager","Media Manager","Desktop restoration"]
-].map(([slug,name,label]) => ({slug,name,label,image:(evidenceImages[slug] ?? [])[0]})).filter(x => x.image);
+  ["media-manager","Media Manager","Desktop restoration"],
+  ["tokyo-nights-racing","Tokyo Nights Racing","Unity systems proof"]
+];
+
+const entries = requested
+  .map(([slug,name,label]) => ({slug,name,label,image:(evidenceImages[slug] ?? [])[0]}))
+  .filter(entry => entry.image);
+
+const count = entries.length;
 ---
-{entries.length > 0 && (
-<section class="proof-wall">
+{count > 0 && (
+<section class:list={["proof-wall",`count-${Math.min(count,4)}`]}>
   <div class="proof-wall-head">
     <p class="eyebrow">Live evidence wall</p>
     <span>REAL PROJECT SCREENSHOTS / PUBLIC-SAFE</span>
   </div>
   <div class="proof-wall-grid">
     {entries.map((entry,index) => (
-      <a class:list={["proof-tile",{major:index===0}]} href={`/projects/${entry.slug}`}>
+      <a class:list={["proof-tile",{major:index===0 && count>2}]} href={`/projects/${entry.slug}`}>
         <img src={entry.image.src} alt={entry.image.alt} loading={index===0?"eager":"lazy"} decoding="async"/>
         <div class="shade"></div>
-        <div class="label"><small>{entry.label}</small><strong>{entry.name}</strong><span>Inspect →</span></div>
+        <div class="label">
+          <small>{entry.label}</small>
+          <strong>{entry.name}</strong>
+          <span>Inspect -&gt;</span>
+        </div>
       </a>
     ))}
   </div>
 </section>
 )}
 <style>
-.proof-wall{margin-top:34px;padding-top:22px;border-top:1px solid var(--line)}
-.proof-wall-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:14px}.proof-wall-head .eyebrow{margin:0}.proof-wall-head>span{color:var(--muted);font-size:.58rem;letter-spacing:.13em}
-.proof-wall-grid{display:grid;grid-template-columns:1.35fr .65fr .65fr;grid-auto-rows:190px;gap:10px}.proof-tile{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:10px;background:#020407}.proof-tile.major{grid-row:span 2}.proof-tile img{width:100%;height:100%;object-fit:cover;transition:transform .22s ease,filter .22s ease;filter:saturate(.8)}.proof-tile:hover img{transform:scale(1.015);filter:saturate(1)}.shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(2,5,9,.92),transparent 68%)}.label{position:absolute;left:14px;right:14px;bottom:13px;display:grid;grid-template-columns:1fr auto;align-items:end}.label small{grid-column:1/-1;color:#96acc0;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase}.label strong{color:#fff;font-family:var(--font-display);font-size:1.15rem;margin-top:4px}.label span{color:#a7d6f4;font-size:.7rem;font-weight:800}
-@media(max-width:850px){.proof-wall-grid{grid-template-columns:1fr 1fr}.proof-tile.major{grid-column:1/-1;grid-row:auto;height:300px}.proof-wall-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:560px){.proof-wall-grid{grid-template-columns:1fr;grid-auto-rows:180px}.proof-tile.major{grid-column:auto;height:220px}}
+.proof-wall{margin-top:20px;padding-top:22px;border-top:1px solid var(--line)}
+.proof-wall-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin-bottom:14px}
+.proof-wall-head .eyebrow{margin:0}
+.proof-wall-head>span{color:var(--muted);font-size:.58rem;letter-spacing:.13em}
+.proof-wall-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:260px;gap:12px}
+.count-1 .proof-wall-grid{grid-template-columns:1fr}
+.count-3 .proof-wall-grid,.count-4 .proof-wall-grid{grid-template-columns:1.35fr .65fr .65fr;grid-auto-rows:190px}
+.count-3 .proof-tile.major,.count-4 .proof-tile.major{grid-row:span 2}
+.proof-tile{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:10px;background:#07101a;min-height:0}
+.proof-tile img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .22s ease,filter .22s ease;filter:saturate(.84) contrast(1.03)}
+.proof-tile:hover img{transform:scale(1.012);filter:saturate(1)}
+.shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(2,5,9,.94),rgba(2,5,9,.12) 68%,transparent)}
+.label{position:absolute;left:16px;right:16px;bottom:14px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:4px 12px}
+.label small{grid-column:1/-1;color:#96acc0;font-size:.58rem;letter-spacing:.11em;text-transform:uppercase}
+.label strong{color:#fff;font-family:var(--font-display);font-size:1.18rem}
+.label span{color:#a7d6f4;font-size:.7rem;font-weight:800}
+@media(max-width:900px){
+  .proof-wall-grid,.count-3 .proof-wall-grid,.count-4 .proof-wall-grid{grid-template-columns:1fr 1fr;grid-auto-rows:200px}
+  .count-3 .proof-tile.major,.count-4 .proof-tile.major{grid-column:1/-1;grid-row:auto;height:300px}
+  .proof-wall-head{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:560px){
+  .proof-wall-grid,.count-3 .proof-wall-grid,.count-4 .proof-wall-grid{grid-template-columns:1fr;grid-auto-rows:180px}
+  .count-3 .proof-tile.major,.count-4 .proof-tile.major{grid-column:auto;height:220px}
+}
 </style>
